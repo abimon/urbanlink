@@ -89,7 +89,7 @@
 
 <body style="background-color: white;">
     <div id="main">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: green;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: green;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <img src="{{asset('storage/images/logo2.png')}}" height="50">
@@ -100,23 +100,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
+                    <li class="nav-item {{request()->path()=='/'?'active':''}}">
+                            <a class="nav-link text-light" aria-current="page" href="/property">Home</a>
+                        </li>
+                        <li class="nav-item {{request()->path()=='property'?'active':''}}">
                             <a class="nav-link text-light" aria-current="page" href="/property">Properties</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown {{request()->path()=='about'?'active':''}}">
                             <a class="nav-link dropdown-toggle text-light" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 About Us
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/about#">Who are we</a></li>
-                                <li><a class="dropdown-item" href="/about#">Our Team</a></li>
+                                <li><a class="dropdown-item" href="/about#who">Who we are</a></li>
+                                <li><a class="dropdown-item" href="/about#services">Our Services</a></li>
+                                <li><a class="dropdown-item" href="/about#team">Our Team</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="/about#">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="/about#testimonials">Testimonials</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-light" aria-current="page" href="/{{Auth()->user()?'dashboard':'login'}}">Account</a></li>
+                        <li class="nav-item {{(request()->path()=='dashboard')||(request()->path()=='login')||(request()->path()=='register')?'active':''}}"><a class="nav-link text-light" aria-current="page" href="/{{Auth()->user()?'dashboard':'login'}}">Account</a></li>
                     </ul>
                     <form class="d-flex" method="get" action="/search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -182,3 +186,6 @@
     <!-- <script type="text/javascript" src="{{asset('storage/js/bootstrap.js')}}"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>

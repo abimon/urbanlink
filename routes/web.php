@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\UnitContoller;
 use App\Http\Controllers\viewsController;
+use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -10,9 +11,7 @@ Route::get('/', [viewsController::class, 'index']);
 Route::get('/gallery', function () {
     return view('gallery');
 });
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [viewsController::class,'about']);
 Route::get('/contact', function () {
     return view('contact');
 });

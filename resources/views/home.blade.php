@@ -7,7 +7,7 @@
             <div class="txt1">welcome to</div>
             <div class="txt2">URBAN LINK</div>
             <div class="txt3">PROPERTIES</div>
-            
+
             <div class="line"></div>
             <div class="txt4">THE EASIEST WAY TO FIND PROPERTY</div>
             <div class="find-form-wrapper clearfix">
@@ -18,9 +18,8 @@
         </div>
     </div>
     <div class="carousel-indicators">
-        @for($i=0;$i<=4;$i++) 
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$i}}" class="active" aria-current="true" aria-label="Slide 1"></button>
-        @endfor
+        @for($i=0;$i<=4;$i++) <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$i}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+            @endfor
     </div>
     <div class="carousel-inner">
         @for($i=1;$i<=5;$i++) <div class="carousel-item {{$i==1?'active':''}}">
@@ -29,16 +28,16 @@
     @endfor
 
 </div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-</button>
+<div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
-
 <div id="slider3_wrapper">
     <div class="container-fluid">
         <div class="slider3_title"><span>LATEST PROPERTIES</span></div>

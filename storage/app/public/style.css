@@ -18,6 +18,134 @@
 	/* padding-top: 60px; */
 }
 
+.nav-item {
+	position: relative;
+	display: block;
+	float: left;
+	padding-left: 0px;
+	white-space: nowrap;
+	background: none;
+	margin: 0 20px;
+}
+
+.nav-item:first-child {
+	margin-left: 0;
+}
+
+.nav-item>a {
+	display: block;
+	text-decoration: none;
+	background: none;
+	font-family: 'Open Sans';
+	font-weight: 800;
+	font-size: 12px;
+	line-height: 33px;
+	color: #fff;
+	text-shadow: none;
+	padding: 0;
+	border: none;
+	margin: 0;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	text-transform: uppercase;
+	position: relative;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-webkit-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+}
+
+.nav-item.active>a,
+.nav-item.active>a:hover,
+.nav-item.active>a:focus,
+.nav-item>a:hover,
+.nav-item>a:focus,
+.nav-item.sfHover>a,
+.nav-item.sfHover>a:hover {
+	color: #00ffff;
+	text-decoration: none;
+	background: none;
+	border-color: #00ffff;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.dropdown-menu ul {
+	position: absolute;
+	display: none;
+	left: -20px;
+	top: 49px;
+	list-style: none;
+	zoom: 1;
+	z-index: 109;
+	margin: 0;
+	padding: 0px;
+	background: #fff;
+	border: 1px solid #dedede;
+	text-align: left;
+}
+
+.dropdown-menu li {
+	margin: 0;
+	position: relative;
+	zoom: 1;
+	display: block;
+	border-top: 1px solid #00ffff;
+}
+
+.dropdown-menu li:first-child {
+	border: none;
+}
+
+.dropdown-menu li a {
+	display: block;
+	position: relative;
+	font-family: 'Open Sans';
+	font-weight: 800;
+	font-size: 12px;
+	line-height: 20px;
+	color: #757575;
+	text-decoration: none;
+	padding: 5px 30px 5px 20px;
+	text-transform: uppercase;
+	transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+}
+
+.dropdown-menu li a:hover {
+	text-decoration: none;
+	color: #3d3d3d;
+	background: #eeeeee;
+}
+
+.dropdown-menu li a em {
+	display: inline-block;
+	width: 6px;
+	height: 11px;
+	background: url(../images/marker1.png) left top no-repeat;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -5px;
+}
+
+.dropdown-menu li a:hover em {
+	background-position: bottom;
+}
+
+.dropdown-menu-2>ul {
+	left: 100%;
+	top: -1px;
+	margin-left: 0px;
+	background: #f6f6f6;
+}
+
 .find_wrapper {
 	position: relative;
 }
@@ -26,8 +154,8 @@
 	position: absolute;
 	left: 50%;
 	margin-left: -220px;
-	top: 50%;
-	margin-top: -201px;
+	top: 15%;
+	margin-top: -50px;
 	z-index: 2;
 }
 
@@ -825,7 +953,7 @@ footer {
 	padding-bottom: 12px;
 }
 
-.navbar_ .nav>li {
+.nav-item {
 	position: relative;
 	display: block;
 	float: left;
@@ -835,11 +963,11 @@ footer {
 	margin: 0 20px;
 }
 
-.navbar_ .nav>li:first-child {
+.nav-item:first-child {
 	margin-left: 0;
 }
 
-.navbar_ .nav>li>a {
+.nav-item>a {
 	display: block;
 	text-decoration: none;
 	background: none;
@@ -865,13 +993,13 @@ footer {
 	-o-transition: color 0.3s ease-out;
 }
 
-.navbar_ .nav>li.active>a,
-.navbar_ .nav>li.active>a:hover,
-.navbar_ .nav>li.active>a:focus,
-.navbar_ .nav>li>a:hover,
-.navbar_ .nav>li>a:focus,
-.navbar_ .nav>li.sfHover>a,
-.navbar_ .nav>li.sfHover>a:hover {
+.nav-item.active>a,
+.nav-item.active>a:hover,
+.nav-item.active>a:focus,
+.nav-item>a:hover,
+.nav-item>a:focus,
+.nav-item.sfHover>a,
+.nav-item.sfHover>a:hover {
 	color: #00ffff;
 	text-decoration: none;
 	background: none;
@@ -881,7 +1009,7 @@ footer {
 	-webkit-box-shadow: none;
 }
 
-.sub-menu ul {
+.dropdown-menu ul {
 	position: absolute;
 	display: none;
 	left: -20px;
@@ -896,7 +1024,7 @@ footer {
 	text-align: left;
 }
 
-.sub-menu li {
+.dropdown-menu li {
 	margin: 0;
 	position: relative;
 	zoom: 1;
@@ -904,11 +1032,11 @@ footer {
 	border-top: 1px solid #00ffff;
 }
 
-.sub-menu li:first-child {
+.dropdown-menu li:first-child {
 	border: none;
 }
 
-.sub-menu li a {
+.dropdown-menu li a {
 	display: block;
 	position: relative;
 	font-family: 'Open Sans';
@@ -925,13 +1053,13 @@ footer {
 	-o-transition: all 0.3s ease-out;
 }
 
-.sub-menu li a:hover {
+.dropdown-menu li a:hover {
 	text-decoration: none;
 	color: #3d3d3d;
 	background: #eeeeee;
 }
 
-.sub-menu li a em {
+.dropdown-menu li a em {
 	display: inline-block;
 	width: 6px;
 	height: 11px;
@@ -942,13 +1070,13 @@ footer {
 	margin-top: -5px;
 }
 
-.sub-menu li a:hover em {
+.dropdown-menu li a:hover em {
 	background-position: bottom;
 }
 
-.sub-menu-1>ul {}
+.dropdown-menu-1>ul {}
 
-.sub-menu-2>ul {
+.dropdown-menu-2>ul {
 	left: 100%;
 	top: -1px;
 	margin-left: 0px;
