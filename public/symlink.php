@@ -1,2 +1,2 @@
 <?php 
-symlink('/home/ausaaken/repositories/urbanlink/storage/app/public', '/home/ausaaken/repositories/urbanlink/realestate/public/storage');
+symlink('/home/ausaaken/repositories/urbanlink/storage/app/public', '/home/ausaaken/repositories/urbanlink/public/storage');
