@@ -89,12 +89,12 @@
 
 <body style="background-color: white;">
     <div id="main">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #010a02;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4e8a3e;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <img src="{{asset('storage/images/logo2.png')}}" height="50">
                 </a>
-
+ 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
