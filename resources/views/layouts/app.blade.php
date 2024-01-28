@@ -88,6 +88,7 @@
 </head>
 
 <body style="background-color: white;">
+<!-- #4e8a3e -->
     <div id="main">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4e8a3e;">
             <div class="container-fluid">
@@ -134,7 +135,7 @@
                 @yield('content')
             </div>
 
-            <div class="bot1_wrapper" style="color: white; background-color:green;">
+            <div class="bot1_wrapper" style="color: white; background-color:black;">
                 <div class="container">
                     <div class="bot1 clearfix">
                         <div class="row">
