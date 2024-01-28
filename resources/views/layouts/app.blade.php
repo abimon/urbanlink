@@ -89,7 +89,7 @@
 
 <body style="background-color: white;">
     <div id="main">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: green;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #010a02;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     <img src="{{asset('storage/images/logo2.png')}}" height="50">
