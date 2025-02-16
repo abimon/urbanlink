@@ -89,7 +89,6 @@
 
 <body style="background-color: white;">
 <!-- #4e8a3e -->
-    <div  >
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
@@ -131,44 +130,32 @@
             </div>
         </nav>
         <div style="width:100% !important;">
-            <div style="min-height: 100vh; " class="p-5 m-5">
+            <div style="min-height: 100vh; " class="p-5">
                 @yield('content')
             </div>
 
-            <div class="" style="color: white; background-color:black;width: 100%;">
+            <div style="color: white; background-color:black;width: 100% !important;">
                 <div class="container">
-                    <div class="bot1 clearfix">
+                    
                         <div class="row">
                             <div class="col-md-4">
 
                                 <div class="logo2_wrapper"><a href="/" class="logo2"><img src="{{asset('storage/images/logo2.png')}}" alt="" style="width: 100%;"></a></div>
 
-                                <footer>
-                                    <div class="copyright" style="color:white;">Copyright © {{date('Y')}}.<br><span class="bot1_title" style="color:white;">Urban Links Properties</span><br>All rights reserved.</div>
-                                </footer>
-
                             </div>
-                            <div class="col-md-4">
-
+                            <div class="col-md-8">
                                 <div class="bot1_title" style="color:white;">Useful information</div>
-
                                 <p>
                                     <b>
                                         Our part as an agency
                                     </b>
                                 </p>
 
-                                <p>
-                                    We are but an agency that collects real estate owners, buyers and tenants to offer our diverse services to both. We own no property as an agency. By signing up with us you agree with our terms and conditions as stated in the T&C statement.
-                                </p>
-
                             </div>
-                            <div class="col-md-4 offset1">
-
-                                <div class="bot1_title" style="color:white;">Follow Us</div>
-
+                            <div class="col-md-6 offset1">
                                 <div class="social_wrapper">
                                     <ul class="social clearfix">
+                                        <li class="text-white">Follow Us</li>
                                         <li><a href="#"><img src="{{asset('storage/images/social_ic1.png')}}"></a></li>
                                         <li><a href="#"><img src="{{asset('storage/images/social_ic3.png')}}"></a></li>
                                         <li><a href="#"><img src="{{asset('storage/images/social_ic5.png')}}"></a></li>
@@ -177,13 +164,14 @@
                                 </div>
 
                             </div>
+                            <div class="col-md-6"><footer>
+                                    <div class="copyright text-center" style="color:white;">Copyright © {{date('Y')}}. <span class="bot1_title" style="color:white;">Urban Links Properties</span> All rights reserved.</div>
+                                </footer></div>
                         </div>
-                    </div>
                 </div>
             </div>
 
         </div>
-    </div>
     <!-- <script type="text/javascript" src="{{asset('storage/js/bootstrap.js')}}"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
