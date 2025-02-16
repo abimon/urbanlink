@@ -89,7 +89,7 @@
 
 <body style="background-color: white;">
 <!-- #4e8a3e -->
-    <div id="main">
+    <div id="main" >
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
@@ -130,12 +130,12 @@
                 </div>
             </div>
         </nav>
-        <div id="inner">
-            <div style="min-height: 400px;">
+        <div id="inner" style="width:100% !important;">
+            <div style="min-height: 100vh; " class="p-5 m-5">
                 @yield('content')
             </div>
 
-            <div class="bot1_wrapper" style="color: white; background-color:black;">
+            <div class="" style="color: white; background-color:black;width: 100%;">
                 <div class="container">
                     <div class="bot1 clearfix">
                         <div class="row">

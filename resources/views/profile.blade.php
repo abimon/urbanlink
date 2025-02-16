@@ -8,7 +8,7 @@
                     <div class="overlay-box">
                         <div class="user-content">
                             <a href="javascript:void(0)"><img src="{{asset('storage/profile/'.Auth()->user()->path)}}" class="thumb-lg img-circle" alt="img"></a>
-                            <h4 class="text-white mt-2">{{Auth()->user()->fname}} {{Auth()->user()->mname}} {{Auth()->user()->lname}}</h4>
+                            <h4 class="text-white mt-2">{{Auth()->user()->name}}</h4>
                             <h5 class="text-white mt-2">{{Auth()->user()->email}}</h5>
                         </div>
                     </div>
@@ -27,13 +27,13 @@
                         <div class="form-group mb-4">
                             <label class="col-md-12 p-0">Full Name</label>
                             <div class="col-md-12 border-bottom p-0">
-                                <input type="text" value="{{Auth()->user()->fname}} {{Auth()->user()->mname}} {{Auth()->user()->lname}}" class="form-control p-0 border-0" disabled>
+                                <input type="text" value="{{Auth()->user()->name}}" class="form-control p-0 border-0" disabled>
                             </div>
                         </div>
                         <div class="form-group mb-4">
                             <label class="col-md-12 p-0">ID No.</label>
                             <div class="col-md-12 border-bottom p-0">
-                                <input type="text" value="{{Auth()->user()->national_id}}" class="form-control p-0 border-0" disabled>
+                                <input type="text" value="{{Auth()->user()->national_id}}" class="form-control p-0 border-0">
                             </div>
                         </div>
                         <!--

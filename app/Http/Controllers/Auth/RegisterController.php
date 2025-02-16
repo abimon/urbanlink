@@ -54,7 +54,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'contact'=>['required','min:9','unique:users'],
-            'profile'=>'required|max:2048'
+            // 'profile'=>'required|max:2048'
         ]);
     }
 
@@ -71,6 +71,9 @@ class RegisterController extends Controller
             $extension = request()->file('profile')->getClientOriginalExtension();
             $path = time() . '.' . $extension;
             request()->file('profile')->storeAs('public/profile', $path);
+        }
+        else{
+            $path = 'default.jpg';
         }
         $code = str_replace('+', '', substr("+254", 0, 1)) . substr("+254", 1);
         $originalStr = $data['contact'];

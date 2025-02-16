@@ -20,8 +20,6 @@ class viewsController extends Controller
         $data = [
             'users'=>User::all(),
             'units' => Unit::all(),
-            'counties' => County::all(),
-            'towns'=>Town::all(),
         ];
         return view('dashboard', $data);
     }

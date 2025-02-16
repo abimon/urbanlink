@@ -36,7 +36,7 @@
                             @enderror
                             <label for="email">{{ __('Email Address') }}</label>
                         </div>
-                        <div class="form-floating mb-3">
+                        <!-- <div class="form-floating mb-3">
                             <input id="profile" type="file" class="form-control @error('profile') is-invalid @enderror" name="profile" value="{{ old('profile') }}" required autocomplete="profile" accept="image/*" autofocus>
                             <label for="profile">{{ __('Passport Photo(4cmX4cm)') }}</label>
                             @error('profile')
@@ -44,7 +44,7 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
-                        </div>
+                        </div> -->
                         <div class="form-floating mb-3">
                             <input id="password" type="password" placeholder=" " class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                             @error('password')

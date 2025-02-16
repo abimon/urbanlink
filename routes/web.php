@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\UnitContoller;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\viewsController;
 use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/addUnit', [UnitContoller::class, 'create']);
     Route::middleware('isAdmin')->group(function () {
         Route::get('/dashboard', [viewsController::class, 'dashboard']);
+        Route::get('/users',function(){
+            return view('users');
+        });
+        Route::resources([
+            'user'=>UsersController::class,
+        ]);
     });
     Route::get('/profile', function () {
         return view('profile');

@@ -33,7 +33,8 @@
                 <div class="navbar-header bg-dark" data-logobg="skin6">
                     <a class="navbar-brand" href="/">
                         <b class="logo-icon ">
-                            <img src="{{asset('storage/images/logo2.png')}}" width='135' alt="homepage" />
+                            <h5>Urban Link</h5>
+                            <!-- <img src="{{asset('storage/images/logo2.png')}}" width='135' alt="homepage" /> -->
                         </b>
                     </a>
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none text-light"
@@ -95,6 +96,13 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/users"
+                                aria-expanded="false">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span class="hide-menu">Users</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/logout"
                                 aria-expanded="false">
                                 <i class="fa fa-power-off text-danger" aria-hidden="true"></i>
@@ -110,7 +118,7 @@
         </aside>
         <div class="page-wrapper">
             
-            <div class="bg-dark" style="min-height: 600px;">
+            <div class="mt-2" style="min-height: 600px;">
                 @yield('content')
             </div>
             <footer class="footer text-center"> {{date('Y')}} © Urban Links Properties</a>
@@ -124,8 +132,8 @@
     <script src="{{asset('storage/vendor/js/waves.js')}}"></script>
     <script src="{{asset('storage/vendor/js/sidebarmenu.js')}}"></script>
     <script src="{{asset('storage/vendor/js/custom.js')}}"></script>
-    <script src="{{asset('storage/vendor/plugins/bower_components/chartist/dist/chartist.min.js')}}"></script>
-    <script src="{{asset('storage/vendor/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script>
+    <!-- <script src="{{asset('storage/vendor/plugins/bower_components/chartist/dist/chartist.min.js')}}"></script> -->
+    <!-- <script src="{{asset('storage/vendor/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')}}"></script> -->
     <script src="{{asset('storage/vendor/js/pages/dashboards/dashboard1.js')}}"></script>
 </body>
 

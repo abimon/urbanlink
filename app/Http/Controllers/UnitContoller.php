@@ -30,8 +30,12 @@ class UnitContoller extends Controller
             $path = $filename . '.' . $extension;
             request()->file('cover')->storeAs('public/cover', $path);
         }
+        $location=json_encode(["county"=>request("county"),
+            "sub_county"=>request("sub_county"),
+            "ward"=>request("ward"),
+            "location"=>request("location")]);
         unit::create([
-            'location'=>request()->county.','.request()->town.','.request()->location,
+            'location'=>$location,
             'type'=>request()->type,
             'path'=>$path,
             'size'=>request()->size,
