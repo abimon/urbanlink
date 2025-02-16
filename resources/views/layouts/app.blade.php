@@ -88,90 +88,95 @@
 </head>
 
 <body style="background-color: white;">
-<!-- #4e8a3e -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <img src="{{asset('storage/images/logo2.png')}}" height="80">
-                </a>
- 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <!-- #4e8a3e -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="{{asset('storage/images/logo2.png')}}" height="80">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item {{request()->path()=='/'?'active':''}}">
-                            <a class="nav-link text-light" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item {{request()->path()=='property'?'active':''}}">
-                            <a class="nav-link text-light" aria-current="page" href="/property">Properties</a>
-                        </li>
-                        <li class="nav-item dropdown {{request()->path()=='about'?'active':''}}">
-                            <a class="nav-link dropdown-toggle text-light" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                About Us
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/about#who">Who we are</a></li>
-                                <li><a class="dropdown-item" href="/about#services">Our Services</a></li>
-                                <li><a class="dropdown-item" href="/about#team">Our Team</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/about#testimonials">Testimonials</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item {{(request()->path()=='dashboard')||(request()->path()=='login')||(request()->path()=='register')?'active':''}}"><a class="nav-link text-light" aria-current="page" href="/{{Auth()->user()?'dashboard':'login'}}">Account</a></li>
-                    </ul>
-                    <form class="d-flex" method="get" action="/search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
+                        <a class="nav-link text-light" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item {{request()->path()=='property'?'active':''}}">
+                        <a class="nav-link text-light" aria-current="page" href="/property">Properties</a>
+                    </li>
+                    <li class="nav-item dropdown {{request()->path()=='about'?'active':''}}">
+                        <a class="nav-link dropdown-toggle text-light" href="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/about#who">Who we are</a></li>
+                            <li><a class="dropdown-item" href="/about#services">Our Services</a></li>
+                            <li><a class="dropdown-item" href="/about#team">Our Team</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/about#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item {{(request()->path()=='dashboard')||(request()->path()=='login')||(request()->path()=='register')?'active':''}}"><a class="nav-link text-light" aria-current="page" href="/{{Auth()->user()?'dashboard':'login'}}">Account</a></li>
+                </ul>
+                <form class="d-flex" method="get" action="/search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
             </div>
-        </nav>
-        <div style="width:100% !important;">
-            <div style="min-height: 100vh; " class="p-5">
-                @yield('content')
-            </div>
-
-            <div style="color: white; background-color:black;width: 100% !important;">
-                <div class="container">
-                    
-                        <div class="row">
-                            <div class="col-md-4">
-
-                                <div class="logo2_wrapper"><a href="/" class="logo2"><img src="{{asset('storage/images/logo2.png')}}" alt="" style="width: 100%;"></a></div>
-
-                            </div>
-                            <div class="col-md-8">
-                                <div class="bot1_title" style="color:white;">Useful information</div>
-                                <p>
-                                    <b>
-                                        Our part as an agency
-                                    </b>
-                                </p>
-
-                            </div>
-                            <div class="col-md-6 offset1">
-                                <div class="social_wrapper">
-                                    <ul class="social clearfix">
-                                        <li class="text-white">Follow Us</li>
-                                        <li><a href="#"><img src="{{asset('storage/images/social_ic1.png')}}"></a></li>
-                                        <li><a href="#"><img src="{{asset('storage/images/social_ic3.png')}}"></a></li>
-                                        <li><a href="#"><img src="{{asset('storage/images/social_ic5.png')}}"></a></li>
-                                        <li><a href="#"><img src="{{asset('storage/images/social_ic6.png')}}"></a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="col-md-6"><footer>
-                                    <div class="copyright text-center" style="color:white;">Copyright © {{date('Y')}}. <span class="bot1_title" style="color:white;">Urban Links Properties</span> All rights reserved.</div>
-                                </footer></div>
-                        </div>
-                </div>
-            </div>
-
         </div>
+    </nav>
+    <div style="width:100% !important;">
+        <div style="min-height: 100vh; " class="p-5">
+            @yield('content')
+        </div>
+
+        <div style="color: white; background-color:black;width: 100% !important;">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <div class="logo2_wrapper">
+                            <a href="/" class="logo2">
+                                <img src="{{asset('storage/images/logo2.png')}}" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="bot1_title" style="color:white;">Useful information</div>
+                        <p>
+                            <b>
+                                Our part as an agency
+                            </b>
+                        </p>
+
+                    </div>
+                    <div class="col-md-6 offset1">
+                        <div class="social_wrapper">
+                            <ul class="social clearfix">
+                                <li class="text-white">Follow Us</li>
+                                <li><a href="#"><img src="{{asset('storage/images/social_ic1.png')}}"></a></li>
+                                <li><a href="#"><img src="{{asset('storage/images/social_ic3.png')}}"></a></li>
+                                <li><a href="#"><img src="{{asset('storage/images/social_ic5.png')}}"></a></li>
+                                <li><a href="#"><img src="{{asset('storage/images/social_ic6.png')}}"></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <footer>
+                            <div class="copyright text-center" style="color:white;">Copyright © {{date('Y')}}. <span class="bot1_title" style="color:white;">Urban Links Properties</span> All rights reserved.</div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- <script type="text/javascript" src="{{asset('storage/js/bootstrap.js')}}"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
