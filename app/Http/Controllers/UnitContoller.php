@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Unit;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class UnitContoller extends Controller
@@ -111,6 +112,7 @@ class UnitContoller extends Controller
                 "services" => $serv,
                 "features" => $features,
                 "price" => request("price"),
+                "created_by"=>Auth::user()->id
             ]);
             return redirect('/dashboard')->with('success', 'Property Added Successfully');
         } catch (\Throwable $th) {
