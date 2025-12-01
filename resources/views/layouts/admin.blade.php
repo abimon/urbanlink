@@ -33,8 +33,8 @@
                 <div class="navbar-header bg-dark" data-logobg="skin6">
                     <a class="navbar-brand" href="/">
                         <b class="logo-icon ">
-                            <h5>Urban Link</h5>
-                            <!-- <img src="{{asset('storage/images/logo2.png')}}" width='135' alt="homepage" /> -->
+                            <!-- <h5>Urban Link</h5> -->
+                            <img src="{{asset('storage/client/images/name-logo-white.png')}}" width='125' alt="homepage" />
                         </b>
                     </a>
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none text-light"
@@ -53,8 +53,9 @@
                         </li>
                         <li>
                             <a class="profile-pic" href="#">
-                                <img src="{{asset('storage/profile/'.(Auth()->user()->path))}}" alt="user-img" width="36"
-                                    class="img-circle"><span class="text-white font-medium">{{Auth()->user()->fname}}</span></a>
+                                <img src="{{asset('storage/profile/'.(Auth()->user()->path))}}" alt="user-img" width="36" class="img-circle">
+                                    <span class="text-white font-medium">{{Auth()->user()->fname}}</span>
+                                </a>
                         </li>
                     </ul>
                 </div>
@@ -75,7 +76,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/book/index"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('book.index') }}"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Tour Bookings</span>

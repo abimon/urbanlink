@@ -8,17 +8,12 @@ use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $data = [
             'units' => Booking::all()
         ];
-        return view('bookings', $data);
+        return view('dashboard.bookings', $data);
     }
     function sms($message, $phone)
     {
@@ -55,72 +50,46 @@ class BookingController extends Controller
     }
     public function create($property)
     {
-        Booking::create([
-            'property' => $property,
-            'name' => request()->name,
-            'email' => request()->email,
-            'contact' => request()->contact,
-            'tour_date' => request()->tour_date
-        ]);
-        $cmessage = "Hello ". request()->name. ", Your tour request has been received successifuly. Our agent will get back to you soon to confirm. Thank you for choosing Urban Links Properties.";
-        $Amessage = "Hello, A client, ". request()->name.", of phone number ".request()->contact.", has booked a tour. Kindly follow-up ASAP. Thank you. Urban Links Properties.";
-        $phone = request()->contact;
-        $this->sms($cmessage, $phone);
-        $this->sms($Amessage, '0701583807');
-        return redirect()->back();
+        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        try {
+            Booking::create([
+                'property' => request('pID'),
+                'name' => request('name'),
+                'email' => request('email'),
+                'contact' => request('contact'),
+                'tour_date' => request('tour_date').' '.request('tour_time'),
+            ]);
+            $cmessage = "Hello " . request('name') . ", Your tour request has been received successifuly. Our agent will get back to you soon to confirm. Thank you for choosing Urban Links Properties.";
+            $Amessage = "Hello, A client, " . request('name') . ", of phone number " . request('contact') . ", has booked a tour. Kindly follow-up ASAP. Thank you. Urban Links Properties.";
+            $phone = request('contact');
+            $this->sms($cmessage, $phone);
+            $this->sms($Amessage, '0701583807');
+            return redirect()->back();
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
